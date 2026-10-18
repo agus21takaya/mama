@@ -1,0 +1,6 @@
+{
+  "name": "Gift Card Spa para Mamá | ZIA",
+  "description": "Una hermosa tarjeta de regalo de ZIA Estética & Spa para mamá de parte de Agus y Benja.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

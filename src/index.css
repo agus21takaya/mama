@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f5f2ed;
+    color: #3b3531;
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-luxury {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Gold foil gradient text and shimmer */
+.text-gold-foil {
+  background: linear-gradient(135deg, #bfa15f 0%, #ecd899 35%, #9b7e38 70%, #d8be75 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-foil {
+  background: linear-gradient(135deg, #c5a868 0%, #ebd99c 30%, #af9045 70%, #dfc683 100%);
+}
+
+.gold-border {
+  border-image: linear-gradient(to right, #bfa15f, #ecd899, #9b7e38, #d8be75) 1;
+}
+
+/* Subtle card sheen animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%) rotate(25deg);
+  }
+  100% {
+    transform: translateX(250%) rotate(25deg);
+  }
+}
+
+.animate-card-shimmer {
+  animation: shimmer 6s infinite ease-in-out;
+}
+
+/* Print styles so mom or sons can print the voucher perfectly */
+@media print {
+  body {
+    background: white !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .gift-card-print-container {
+    box-shadow: none !important;
+    border: 1px solid #c5a868 !important;
+    page-break-inside: avoid;
+    margin: 0 auto;
+  }
+}
